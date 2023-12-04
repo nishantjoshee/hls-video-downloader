@@ -27,7 +27,7 @@ app.get('/convert', (req, res) => {
             });
         })
         .on('error', (err) => {
-            res.status(500).send('Error during conversion');
+            res.status(500).send(err);
         })
         .run();
 });
